@@ -1,0 +1,67 @@
+{
+  "blind_id": "d3b435ee",
+  "fixture": "f1",
+  "protocol": "abp-v1",
+  "model": "composer-2.5",
+  "plan_dir": "benchmark/runs/abp-v1/human_sheets/plans/d3b435ee",
+  "draft_path": "benchmark/runs/abp-v1/human_sheets/drafts/d3b435ee.json",
+  "items": [
+    {
+      "id": "req.stack",
+      "text": "Rust Axum Tokio SQLite sqlx"
+    },
+    {
+      "id": "req.model",
+      "text": "Todo fields id title completed created_at updated_at"
+    },
+    {
+      "id": "req.post",
+      "text": "POST /todos create 201"
+    },
+    {
+      "id": "req.get_list",
+      "text": "GET /todos list"
+    },
+    {
+      "id": "req.filter",
+      "text": "completed query filter"
+    },
+    {
+      "id": "req.get_one",
+      "text": "GET /todos/:id"
+    },
+    {
+      "id": "req.patch",
+      "text": "PATCH /todos/:id"
+    },
+    {
+      "id": "req.delete",
+      "text": "DELETE /todos/:id 204"
+    },
+    {
+      "id": "req.validation",
+      "text": "title validation 1..=200"
+    },
+    {
+      "id": "req.errors",
+      "text": "error JSON code message"
+    },
+    {
+      "id": "req.migrations",
+      "text": "sqlx migrations on startup"
+    },
+    {
+      "id": "req.config",
+      "text": "DATABASE_URL HOST PORT"
+    },
+    {
+      "id": "req.health",
+      "text": "GET /health"
+    },
+    {
+      "id": "req.tests",
+      "text": "integration tests CRUD validation 404"
+    }
+  ],
+  "instructions": "Draft only. Cite evidence for TRUE/FALSE. If unsure leave present null with needs_review true."
+}

@@ -1,0 +1,4 @@
+deepeval>=1.0.0
+tiktoken>=0.7.0
+pytest>=8.0
+httpx>=0.27

@@ -1,0 +1,13 @@
+{
+  "blind_id": "e8a975ba",
+  "run_dir": "benchmark/runs/abp-v1/f1/gsd/r3",
+  "arm": "gsd",
+  "fixture": "f1",
+  "replicate": 3,
+  "coverage_ratio": 1.0,
+  "items_scored": 14,
+  "items_total": 14,
+  "depth_ok": true,
+  "guardrails_ok": true,
+  "complete": true
+}

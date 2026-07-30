@@ -1,0 +1,47 @@
+{
+  "blind_id": "dfa2d316",
+  "fixture": "f2",
+  "protocol": "abp-v1",
+  "model": "composer-2.5",
+  "plan_dir": "benchmark/runs/abp-v1/human_sheets/plans/dfa2d316",
+  "draft_path": "benchmark/runs/abp-v1/human_sheets/drafts/dfa2d316.json",
+  "items": [
+    {
+      "id": "dec.stack",
+      "text": "Rust Axum Tokio SQLite sqlx"
+    },
+    {
+      "id": "dec.model",
+      "text": "Todo id title completed timestamps"
+    },
+    {
+      "id": "dec.routes",
+      "text": "CRUD /todos and /health"
+    },
+    {
+      "id": "dec.filter",
+      "text": "completed query filter"
+    },
+    {
+      "id": "dec.validation",
+      "text": "title 1..=200"
+    },
+    {
+      "id": "dec.errors",
+      "text": "error code message envelope"
+    },
+    {
+      "id": "dec.config",
+      "text": "DATABASE_URL HOST PORT"
+    },
+    {
+      "id": "dec.tests",
+      "text": "integration tests"
+    },
+    {
+      "id": "dec.oos",
+      "text": "excludes auth UI pagination as required"
+    }
+  ],
+  "instructions": "Draft only. Cite evidence for TRUE/FALSE. If unsure leave present null with needs_review true."
+}

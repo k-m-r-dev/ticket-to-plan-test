@@ -102,19 +102,45 @@ def overplanning_penalty(text: str) -> dict:
     return {"hits": hits, "count": len(hits)}
 
 
+def resolve_run_dir(run_id: str) -> Path:
+    direct = RUNS / run_id
+    if (direct / "meta.json").is_file():
+        return direct
+    matches = list(RUNS.rglob(run_id))
+    for m in matches:
+        if (m / "meta.json").is_file():
+            return m
+    # path-like argument
+    cand = Path(run_id)
+    if (cand / "meta.json").is_file():
+        return cand
+    raise SystemExit(f"Cannot resolve run: {run_id}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("run_id", help="Run id under benchmark/runs/")
+    parser.add_argument("run_id", help="Run id or path under benchmark/runs/")
     args = parser.parse_args()
 
-    run_dir = RUNS / args.run_id
+    run_dir = resolve_run_dir(args.run_id)
     meta_path = run_dir / "meta.json"
     if not meta_path.is_file():
         raise SystemExit(f"Missing meta.json in {run_dir}")
 
     meta = json.loads(meta_path.read_text(encoding="utf-8"))
     arm = meta["arm"]
-    gold = json.loads(GOLD.read_text(encoding="utf-8"))
+    fixture = meta.get("fixture", "f1")
+    if fixture == "f2":
+        gold_path = ROOT / "fixtures" / "todo-api-ambiguous" / "decision_checklist.json"
+        gold_raw = json.loads(gold_path.read_text(encoding="utf-8"))
+        gold = {
+            "requirements": gold_raw.get("decisions", []),
+            "depth": gold_raw.get("depth", {}),
+            "guardrails": gold_raw.get("guardrails", []),
+            "not_in_scope": [],
+        }
+    else:
+        gold = json.loads(GOLD.read_text(encoding="utf-8"))
     text, file_count, total_bytes = load_artifacts_text(run_dir / "artifacts")
     penalty_text = strip_exclusion_sections(text)
 

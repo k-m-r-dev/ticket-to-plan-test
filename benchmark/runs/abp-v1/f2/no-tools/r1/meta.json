@@ -1,0 +1,42 @@
+{
+  "protocol": "abp-v1",
+  "run_id": "abp-v1-f2-no-tools-r1",
+  "arm": "no-tools",
+  "fixture": "f2",
+  "fixture_id": "todo-api-ambiguous",
+  "replicate": 1,
+  "skill": "skills/ticket-to-plan-no-tools/SKILL.md",
+  "skill_hash": "3719ec3a1d89ff4b3fff9a4d11127e7a512966e1cdf507c5d92c7149eab2fd87",
+  "fixture_hash": "e6e1ecf556a3420f4baae07429ab3040a31f5f50c9017595edbc24ee21735a89",
+  "model": "composer-2.5",
+  "transcript_ref": null,
+  "created_at": "2026-07-30T10:46:19.141435+00:00",
+  "started_at": "2026-07-30T13:38:21.889933+00:00",
+  "ended_at": "2026-07-30T13:39:01.381551+00:00",
+  "wall_clock_seconds": 39,
+  "tokens": {
+    "tiktoken": {
+      "total": 3502,
+      "encoding": "cl100k_base"
+    },
+    "cursor_ui": {
+      "total": null,
+      "notes": ""
+    },
+    "estimate_chars": {
+      "total": 3473
+    }
+  },
+  "tool_calls": 29,
+  "artifact_paths": [
+    "artifacts/ROADMAP.md",
+    "artifacts/S01-scaffold-persistence-PLAN.md",
+    "artifacts/S02-crud-validation-PLAN.md",
+    "artifacts/S03-integration-tests-polish-PLAN.md"
+  ],
+  "status": "scored",
+  "notes": "",
+  "driver_wall_seconds": 202.7,
+  "driver_exit_code": 0,
+  "driver_log": "benchmark/runs/abp-v1/_driver_logs/f2-no-tools-r1.log"
+}

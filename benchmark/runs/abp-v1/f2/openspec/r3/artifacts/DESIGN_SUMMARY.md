@@ -1,0 +1,3 @@
+# Design summary — todo-http-api-abp-f2-r3
+
+Greenfield **Rust / Axum / Tokio** Todo HTTP API at `apps/todo-api` with **SQLite** persistence via **sqlx** migrations. Ambiguous ticket open questions were resolved non-interactively (see `CLARIFICATIONS.md`): REST CRUD at `/todos`, `GET /health`, shared JSON error envelope, optional `completed` filter (no pagination), no auth, env config (`DATABASE_URL`, `HOST`, `PORT`), and in-process integration tests. Plan follows three slices — scaffold+persistence, CRUD+errors+filter, tests+clippy — with **milestone** commit cadence and explicit guardrails embedded in `proposal.md` and `tasks.md`. Plan-ready; no implementation in this run.

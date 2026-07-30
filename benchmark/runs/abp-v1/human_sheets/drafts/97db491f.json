@@ -1,0 +1,80 @@
+{
+  "blind_id": "97db491f",
+  "fixture": "f2",
+  "scorer": "agent-draft",
+  "model": "composer-2.5",
+  "items": [
+    {
+      "id": "dec.stack",
+      "present": true,
+      "needs_review": false,
+      "evidence": "CLARIFICATIONS.md: \"Rust with Axum on Tokio\"; \"SQLite via sqlx with migrations\"",
+      "note": ""
+    },
+    {
+      "id": "dec.model",
+      "present": true,
+      "needs_review": false,
+      "evidence": "CLARIFICATIONS.md: \"id (UUID string), title (string), completed (bool), created_at / updated_at (RFC3339 strings)\"",
+      "note": ""
+    },
+    {
+      "id": "dec.routes",
+      "present": true,
+      "needs_review": false,
+      "evidence": "CLARIFICATIONS.md: \"POST /todos, GET /todos, GET /todos/:id, PATCH /todos/:id, DELETE /todos/:id, GET /health\"",
+      "note": ""
+    },
+    {
+      "id": "dec.filter",
+      "present": true,
+      "needs_review": false,
+      "evidence": "CLARIFICATIONS.md: \"Optional completed=true|false on GET /todos\"",
+      "note": ""
+    },
+    {
+      "id": "dec.validation",
+      "present": true,
+      "needs_review": false,
+      "evidence": "CLARIFICATIONS.md: \"reject empty/whitespace-only or length > 200 with validation_error\"",
+      "note": ""
+    },
+    {
+      "id": "dec.errors",
+      "present": true,
+      "needs_review": false,
+      "evidence": "CLARIFICATIONS.md: {\"error\":{\"code\":\"<string>\",\"message\":\"<string>\"}} with codes validation_error, not_found, internal_error",
+      "note": ""
+    },
+    {
+      "id": "dec.config",
+      "present": true,
+      "needs_review": false,
+      "evidence": "CLARIFICATIONS.md: \"DATABASE_URL (default sqlite:todos.db), HOST (default 127.0.0.1), PORT (default 8080)\"",
+      "note": ""
+    },
+    {
+      "id": "dec.tests",
+      "present": true,
+      "needs_review": false,
+      "evidence": "06-03-PLAN.md T01: \"In-process axum tests: CRUD, filter, validation, bad completed query, 404 paths; temp sqlite\"",
+      "note": ""
+    },
+    {
+      "id": "dec.oos",
+      "present": true,
+      "needs_review": false,
+      "evidence": "CLARIFICATIONS.md Out of scope: \"No auth, multi-tenant tenancy, mobile client, UI, ... pagination beyond completed filter\"",
+      "note": ""
+    }
+  ],
+  "depth_ok": true,
+  "depth_needs_review": false,
+  "depth_note": "Roadmap with S01\u2013S03 slices and numbered tasks (T01\u2013T04) with files, verify steps, and must-haves",
+  "guardrails_ok": true,
+  "guardrails_needs_review": false,
+  "guardrails_note": "06-ROADMAP.md: Task Handoff Gate (wait for explicit do next); Remote Mutation Rule (no push/PR without approval)",
+  "summary_note": "F2 ambiguous ticket resolved via CLARIFICATIONS.md; all checklist decisions explicitly documented with implementable slice/task structure.",
+  "drafted_at": "2026-07-30T16:02:45+00:00",
+  "driver_wall_seconds": 76.1
+}

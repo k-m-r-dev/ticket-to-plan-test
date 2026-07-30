@@ -1,0 +1,81 @@
+{
+  "blind_id": "d85587a0",
+  "protocol": "abp-v1",
+  "fixture": "f1",
+  "instructions": "Score Yes/No without knowing which arm produced the plan. Do not open mapping_key.json.",
+  "items": [
+    {
+      "id": "req.stack",
+      "text": "Rust Axum Tokio SQLite sqlx",
+      "present": null
+    },
+    {
+      "id": "req.model",
+      "text": "Todo fields id title completed created_at updated_at",
+      "present": null
+    },
+    {
+      "id": "req.post",
+      "text": "POST /todos create 201",
+      "present": null
+    },
+    {
+      "id": "req.get_list",
+      "text": "GET /todos list",
+      "present": null
+    },
+    {
+      "id": "req.filter",
+      "text": "completed query filter",
+      "present": null
+    },
+    {
+      "id": "req.get_one",
+      "text": "GET /todos/:id",
+      "present": null
+    },
+    {
+      "id": "req.patch",
+      "text": "PATCH /todos/:id",
+      "present": null
+    },
+    {
+      "id": "req.delete",
+      "text": "DELETE /todos/:id 204",
+      "present": null
+    },
+    {
+      "id": "req.validation",
+      "text": "title validation 1..=200",
+      "present": null
+    },
+    {
+      "id": "req.errors",
+      "text": "error JSON code message",
+      "present": null
+    },
+    {
+      "id": "req.migrations",
+      "text": "sqlx migrations on startup",
+      "present": null
+    },
+    {
+      "id": "req.config",
+      "text": "DATABASE_URL HOST PORT",
+      "present": null
+    },
+    {
+      "id": "req.health",
+      "text": "GET /health",
+      "present": null
+    },
+    {
+      "id": "req.tests",
+      "text": "integration tests CRUD validation 404",
+      "present": null
+    }
+  ],
+  "depth_ok": null,
+  "guardrails_ok": null,
+  "notes": ""
+}

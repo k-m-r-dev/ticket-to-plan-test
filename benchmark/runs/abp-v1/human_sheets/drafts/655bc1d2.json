@@ -1,0 +1,115 @@
+{
+  "blind_id": "655bc1d2",
+  "fixture": "f1",
+  "scorer": "agent-draft",
+  "model": "composer-2.5",
+  "items": [
+    {
+      "id": "req.stack",
+      "present": true,
+      "needs_review": false,
+      "evidence": "IMPLEMENTATION_PLAN.md Stack table: \"Rust + Tokio\", \"Axum\", \"SQLite via sqlx\"",
+      "note": ""
+    },
+    {
+      "id": "req.model",
+      "present": true,
+      "needs_review": false,
+      "evidence": "IMPLEMENTATION_PLAN.md Data model: Todo fields id, title, completed, created_at, updated_at",
+      "note": ""
+    },
+    {
+      "id": "req.post",
+      "present": true,
+      "needs_review": false,
+      "evidence": "Step 7: \"POST /todos\" \u2192 \"Success: 201 with full Todo JSON\"",
+      "note": ""
+    },
+    {
+      "id": "req.get_list",
+      "present": true,
+      "needs_review": false,
+      "evidence": "Step 8: \"GET /todos (list + completed filter)\" \u2192 \"Success: 200 JSON array\"",
+      "note": ""
+    },
+    {
+      "id": "req.filter",
+      "present": true,
+      "needs_review": false,
+      "evidence": "Step 8: \"Optional query: completed=true or completed=false\"",
+      "note": ""
+    },
+    {
+      "id": "req.get_one",
+      "present": true,
+      "needs_review": false,
+      "evidence": "Step 9: \"GET /todos/:id\" \u2192 \"Success: 200 with Todo\"",
+      "note": ""
+    },
+    {
+      "id": "req.patch",
+      "present": true,
+      "needs_review": false,
+      "evidence": "Step 10: \"PATCH /todos/:id\" with partial title/completed body \u2192 \"Success: 200 with updated Todo\"",
+      "note": ""
+    },
+    {
+      "id": "req.delete",
+      "present": true,
+      "needs_review": false,
+      "evidence": "Step 11: \"DELETE /todos/:id\" \u2192 \"Success: 204 empty body\"",
+      "note": ""
+    },
+    {
+      "id": "req.validation",
+      "present": true,
+      "needs_review": false,
+      "evidence": "Data model: \"title \u2026 length 1..=200\"; Step 7: \"Empty/whitespace-only title or title longer than 200 \u2192 400 validation_error\"",
+      "note": ""
+    },
+    {
+      "id": "req.errors",
+      "present": true,
+      "needs_review": false,
+      "evidence": "Error envelope: \"{ \\\"error\\\": { \\\"code\\\": \\\"string_snake_case\\\", \\\"message\\\": \\\"human readable\\\" } }\"",
+      "note": ""
+    },
+    {
+      "id": "req.migrations",
+      "present": true,
+      "needs_review": false,
+      "evidence": "Step 3: \"run sqlx::migrate!() before serving\"",
+      "note": ""
+    },
+    {
+      "id": "req.config",
+      "present": true,
+      "needs_review": false,
+      "evidence": "Configuration table: DATABASE_URL, HOST, PORT env vars with defaults",
+      "note": ""
+    },
+    {
+      "id": "req.health",
+      "present": true,
+      "needs_review": false,
+      "evidence": "Step 6: \"GET /health \u2192 200 { \\\"status\\\": \\\"ok\\\" }\"",
+      "note": ""
+    },
+    {
+      "id": "req.tests",
+      "present": true,
+      "needs_review": false,
+      "evidence": "TEST_PLAN.md: CRUD happy path, validation (empty/overlong title), 404 paths on GET/PATCH/DELETE",
+      "note": ""
+    }
+  ],
+  "depth_ok": true,
+  "depth_needs_review": false,
+  "depth_note": "15 ordered implementation steps with module layout, validation gates, and linked TEST_PLAN.md",
+  "guardrails_ok": true,
+  "guardrails_needs_review": false,
+  "guardrails_note": "IMPLEMENTATION_PLAN.md: \"Planning only \u2014 do not implement in the benchmark session\"",
+  "summary_note": "Comprehensive f1 plan covering stack, CRUD endpoints, validation, errors, config, migrations, health, and integration tests.",
+  "drafted_at": "2026-07-30T15:24:07+00:00",
+  "driver_wall_seconds": 92.4
+}

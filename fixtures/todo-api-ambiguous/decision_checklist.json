@@ -1,0 +1,25 @@
+{
+  "fixture": "todo-api-ambiguous",
+  "decisions": [
+    {"id": "dec.stack", "text": "Rust Axum Tokio SQLite sqlx", "keywords": ["axum", "sqlx", "sqlite", "rust"]},
+    {"id": "dec.model", "text": "Todo id title completed timestamps", "keywords": ["title", "completed", "created_at", "uuid"]},
+    {"id": "dec.routes", "text": "CRUD /todos and /health", "keywords": ["POST /todos", "GET /todos", "/health", "DELETE"]},
+    {"id": "dec.filter", "text": "completed query filter", "keywords": ["completed", "filter"]},
+    {"id": "dec.validation", "text": "title 1..=200", "keywords": ["validation", "200"]},
+    {"id": "dec.errors", "text": "error code message envelope", "keywords": ["validation_error", "not_found", "error"]},
+    {"id": "dec.config", "text": "DATABASE_URL HOST PORT", "keywords": ["DATABASE_URL", "PORT"]},
+    {"id": "dec.tests", "text": "integration tests", "keywords": ["test", "integration", "404"]},
+    {"id": "dec.oos", "text": "excludes auth UI pagination as required", "keywords": ["out of scope", "non-goals", "no auth"]}
+  ],
+  "depth": {
+    "gsd": [{"id": "depth.unit", "keywords": ["milestone", "phase", "M0"]}, {"id": "depth.tasks", "keywords": ["task", "slice"]}],
+    "openspec": [{"id": "depth.proposal", "keywords": ["proposal"]}, {"id": "depth.tasks", "keywords": ["tasks", "- [ ]"]}],
+    "no-tools": [{"id": "depth.structure", "keywords": ["slice", "task"]}, {"id": "depth.validation", "keywords": ["validation"]}],
+    "native": [{"id": "depth.steps", "keywords": ["step", "1."]}, {"id": "depth.tests", "keywords": ["test"]}]
+  },
+  "guardrails": [
+    {"id": "gr.delivery", "keywords": ["Delivery", "Guardrails", "commit"]},
+    {"id": "gr.approval", "keywords": ["approval", "do next"]},
+    {"id": "gr.remote", "keywords": ["push", "PR", "remote"]}
+  ]
+}

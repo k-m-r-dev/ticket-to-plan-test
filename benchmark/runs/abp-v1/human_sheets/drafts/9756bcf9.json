@@ -1,0 +1,80 @@
+{
+  "blind_id": "9756bcf9",
+  "fixture": "f2",
+  "scorer": "agent-draft",
+  "model": "composer-2.5",
+  "items": [
+    {
+      "id": "dec.stack",
+      "present": true,
+      "needs_review": false,
+      "evidence": "DESIGN_SUMMARY.md Q1\u2013Q2: \"Rust with Axum on Tokio\"; \"SQLite via sqlx\"; IMPLEMENTATION_PLAN.md Technology choices table lists Rust, Axum, Tokio, SQLite via sqlx",
+      "note": ""
+    },
+    {
+      "id": "dec.model",
+      "present": true,
+      "needs_review": false,
+      "evidence": "DESIGN_SUMMARY.md Q7: \"id (UUID, server-generated), title (trimmed, 1..=200 chars), completed (bool, default false), created_at / updated_at (RFC 3339 UTC)\"; IMPLEMENTATION_PLAN.md Data model table",
+      "note": ""
+    },
+    {
+      "id": "dec.routes",
+      "present": true,
+      "needs_review": false,
+      "evidence": "DESIGN_SUMMARY.md Q3: \"GET /health \u2192 200; POST /todos \u2192 201; GET /todos \u2192 200; GET /todos/:id \u2192 200; PATCH /todos/:id \u2192 200; DELETE /todos/:id \u2192 204\"; IMPLEMENTATION_PLAN.md API contract sections",
+      "note": ""
+    },
+    {
+      "id": "dec.filter",
+      "present": true,
+      "needs_review": false,
+      "evidence": "DESIGN_SUMMARY.md Q5: \"Optional completed=true or completed=false on GET /todos\"; IMPLEMENTATION_PLAN.md GET /todos: \"Optional query: completed=true or completed=false\"",
+      "note": ""
+    },
+    {
+      "id": "dec.validation",
+      "present": true,
+      "needs_review": false,
+      "evidence": "DESIGN_SUMMARY.md Q7: title \"1..=200 chars\"; IMPLEMENTATION_PLAN.md: \"Required; trimmed; length 1..=200\"; POST/PATCH handlers reject empty or >200",
+      "note": ""
+    },
+    {
+      "id": "dec.errors",
+      "present": true,
+      "needs_review": false,
+      "evidence": "DESIGN_SUMMARY.md Q4: \"{ \\\"error\\\": { \\\"code\\\": \\\"snake_case\\\", \\\"message\\\": \\\"string\\\" } }\"; IMPLEMENTATION_PLAN.md Error envelope with validation_error, not_found, internal_error",
+      "note": ""
+    },
+    {
+      "id": "dec.config",
+      "present": true,
+      "needs_review": false,
+      "evidence": "DESIGN_SUMMARY.md Q8: \"env DATABASE_URL, HOST, PORT with sensible defaults\"; IMPLEMENTATION_PLAN.md Configuration table: DATABASE_URL (sqlite:todos.db), HOST (127.0.0.1), PORT (8080)",
+      "note": ""
+    },
+    {
+      "id": "dec.tests",
+      "present": true,
+      "needs_review": false,
+      "evidence": "TEST_PLAN.md: 17 required integration tests (CRUD, completed filter, validation, 404, health, error envelope); IMPLEMENTATION_PLAN.md Steps 13\u201314: \"Integration test harness\" and \"Full integration suite\"",
+      "note": ""
+    },
+    {
+      "id": "dec.oos",
+      "present": true,
+      "needs_review": false,
+      "evidence": "DESIGN_SUMMARY.md Out of scope: \"Authentication / authorization... pagination... web UI, mobile client\"; IMPLEMENTATION_PLAN.md Out of scope: \"Authentication... pagination... web/mobile UI\"",
+      "note": ""
+    }
+  ],
+  "depth_ok": true,
+  "depth_needs_review": false,
+  "depth_note": "15 numbered implementation steps with validation gates; directory layout; full API contract; dedicated TEST_PLAN with 17 integration scenarios",
+  "guardrails_ok": true,
+  "guardrails_needs_review": false,
+  "guardrails_note": "DESIGN_SUMMARY.md: \"planning artifacts only; no implementation in this session\"; IMPLEMENTATION_PLAN.md: \"Planning only \u2014 do not implement during the benchmark session\"",
+  "summary_note": "Ambiguous-ticket plan with explicit assumed answers table; all f2 decision checklist items resolved across DESIGN_SUMMARY, IMPLEMENTATION_PLAN, and TEST_PLAN.",
+  "drafted_at": "2026-07-30T16:01:13+00:00",
+  "driver_wall_seconds": 74.6
+}

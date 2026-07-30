@@ -1,0 +1,39 @@
+{
+  "protocol": "abp-v1",
+  "run_id": "abp-v1-f1-openspec-r2",
+  "arm": "openspec",
+  "fixture": "f1",
+  "fixture_id": "todo-api",
+  "replicate": 2,
+  "skill": "skills/ticket-to-plan-openspec/SKILL.md",
+  "skill_hash": "b4ac4da318061b17f7d0bd67b1abc0ae2a8c605466e98b5724dc0e0af8b9f144",
+  "fixture_hash": "df90965d2390ab6d5bc96a0f16057ca0db35fc2be0053d163d1ad99a6a15ac16",
+  "model": "claude-sonnet-5-thinking",
+  "transcript_ref": null,
+  "created_at": "2026-07-30T10:46:18.504684+00:00",
+  "started_at": "2026-07-30T11:58:37.673026+00:00",
+  "ended_at": "2026-07-30T12:04:15.920175+00:00",
+  "wall_clock_seconds": 338,
+  "tokens": {
+    "tiktoken": {
+      "total": 7708,
+      "encoding": "cl100k_base"
+    },
+    "cursor_ui": {
+      "total": null,
+      "notes": ""
+    },
+    "estimate_chars": {
+      "total": 7575
+    }
+  },
+  "tool_calls": 36,
+  "artifact_paths": [
+    "artifacts/design.md",
+    "artifacts/proposal.md",
+    "artifacts/specs/todo-api/spec.md",
+    "artifacts/tasks.md"
+  ],
+  "status": "scored",
+  "notes": ""
+}

@@ -1,0 +1,80 @@
+{
+  "blind_id": "825fb86c",
+  "fixture": "f2",
+  "scorer": "agent-draft",
+  "model": "composer-2.5",
+  "items": [
+    {
+      "id": "dec.stack",
+      "present": true,
+      "needs_review": false,
+      "evidence": "ROADMAP Q1\u2013Q2: \"Rust with Axum on Tokio\"; \"SQLite via sqlx\"; S01 Goal: \"Rust + Axum + Tokio + sqlx\"",
+      "note": ""
+    },
+    {
+      "id": "dec.model",
+      "present": true,
+      "needs_review": false,
+      "evidence": "ROADMAP Q7: \"id (UUID, server-generated), title ... completed ... created_at / updated_at (RFC 3339 UTC)\"; S02 T01 lists same Todo fields",
+      "note": ""
+    },
+    {
+      "id": "dec.routes",
+      "present": true,
+      "needs_review": false,
+      "evidence": "ROADMAP API contract: POST/GET/PATCH/DELETE /todos plus GET /health with status codes; S01 T04 health, S02 covers full CRUD",
+      "note": ""
+    },
+    {
+      "id": "dec.filter",
+      "present": true,
+      "needs_review": false,
+      "evidence": "ROADMAP Q5: \"Optional completed=true|false on GET /todos\"; S02 T03: \"Optional query completed=true or completed=false\"",
+      "note": ""
+    },
+    {
+      "id": "dec.validation",
+      "present": true,
+      "needs_review": false,
+      "evidence": "ROADMAP Q7: \"title (trimmed, 1..=200 chars)\"; S02 T02 DoD: \"empty title 400, title > 200 chars 400\"",
+      "note": ""
+    },
+    {
+      "id": "dec.errors",
+      "present": true,
+      "needs_review": false,
+      "evidence": "ROADMAP Q4: \"{ error: { code, message } }\" with validation_error/not_found/internal_error; S02 T07 central error envelope",
+      "note": ""
+    },
+    {
+      "id": "dec.config",
+      "present": true,
+      "needs_review": false,
+      "evidence": "ROADMAP Q8: \"env DATABASE_URL, HOST, PORT with defaults\"; S01 T02: \"DATABASE_URL=sqlite:todos.db, HOST=127.0.0.1, PORT=8080\"",
+      "note": ""
+    },
+    {
+      "id": "dec.tests",
+      "present": true,
+      "needs_review": false,
+      "evidence": "ROADMAP brainstorming: \"in-process integration tests via Axum test client\"; S03 T02 CRUD integration suite and T03 persistence/health tests",
+      "note": ""
+    },
+    {
+      "id": "dec.oos",
+      "present": true,
+      "needs_review": false,
+      "evidence": "ROADMAP Out of scope: \"Authentication ... pagination ... web UI / React frontend\"; Q5 \"no pagination in v1\"; Q6 \"Auth? None\"",
+      "note": ""
+    }
+  ],
+  "depth_ok": true,
+  "depth_needs_review": false,
+  "depth_note": "Milestone ROADMAP with three slice plans (S01\u2013S03), each broken into numbered tasks with Inputs/Outputs/Validation/DoD",
+  "guardrails_ok": true,
+  "guardrails_needs_review": false,
+  "guardrails_note": "ROADMAP/S03: Task Handoff Gate (wait for do next), human approval before commit, Remote Mutation Rule (no push/PR without approval)",
+  "summary_note": "f2 plan documents grilling assumptions in ROADMAP ambiguity gate; all nine decision items explicitly covered with implementable slice/task detail.",
+  "drafted_at": "2026-07-30T15:59:44+00:00",
+  "driver_wall_seconds": 75.0
+}

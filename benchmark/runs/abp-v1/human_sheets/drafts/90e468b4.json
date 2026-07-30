@@ -1,0 +1,115 @@
+{
+  "blind_id": "90e468b4",
+  "fixture": "f1",
+  "scorer": "agent-draft",
+  "model": "composer-2.5",
+  "items": [
+    {
+      "id": "req.stack",
+      "present": true,
+      "needs_review": false,
+      "evidence": "design.md: \"Stack is fixed: Axum, Tokio, SQLite via sqlx\"; tasks.md 1.1 lists axum, tokio, sqlx (sqlite + migrate)",
+      "note": ""
+    },
+    {
+      "id": "req.model",
+      "present": true,
+      "needs_review": false,
+      "evidence": "spec.md Todo resource model: \"id, title, completed, created_at, updated_at\"; tasks.md 1.2 migration lists id, title, completed, created_at, updated_at",
+      "note": ""
+    },
+    {
+      "id": "req.post",
+      "present": true,
+      "needs_review": false,
+      "evidence": "spec.md Create todo: \"POST /todos\" returns \"201\"; tasks.md 2.2 \"Implement POST /todos ... 201\"",
+      "note": ""
+    },
+    {
+      "id": "req.get_list",
+      "present": true,
+      "needs_review": false,
+      "evidence": "spec.md List and filter: \"GET /todos returning 200 with a JSON array\"; tasks.md 2.3 \"Implement GET /todos\"",
+      "note": ""
+    },
+    {
+      "id": "req.filter",
+      "present": true,
+      "needs_review": false,
+      "evidence": "spec.md: \"Optional query completed=true or completed=false MUST filter results\"; tasks.md 2.3 \"optional completed=true|false\"",
+      "note": ""
+    },
+    {
+      "id": "req.get_one",
+      "present": true,
+      "needs_review": false,
+      "evidence": "spec.md Get todo by id: \"GET /todos/:id\"; tasks.md 2.4 includes GET /todos/:id",
+      "note": ""
+    },
+    {
+      "id": "req.patch",
+      "present": true,
+      "needs_review": false,
+      "evidence": "spec.md Patch todo: \"PATCH /todos/:id\"; tasks.md 2.4 \"PATCH /todos/:id (non-empty body, title rules, refresh updated_at)\"",
+      "note": ""
+    },
+    {
+      "id": "req.delete",
+      "present": true,
+      "needs_review": false,
+      "evidence": "spec.md Delete: \"DELETE /todos/:id returning 204\"; tasks.md 2.4 \"DELETE /todos/:id (204)\"",
+      "note": ""
+    },
+    {
+      "id": "req.validation",
+      "present": true,
+      "needs_review": false,
+      "evidence": "spec.md Create: \"titles longer than 200 characters MUST return 400\"; tasks.md 2.2 \"trim title, length 1..=200\"",
+      "note": ""
+    },
+    {
+      "id": "req.errors",
+      "present": true,
+      "needs_review": false,
+      "evidence": "spec.md Error shape: \"{ error: { code, message } }\" with validation_error, not_found, internal_error; tasks.md 2.1 AppError envelope",
+      "note": ""
+    },
+    {
+      "id": "req.migrations",
+      "present": true,
+      "needs_review": false,
+      "evidence": "design.md D2: \"migrations/ folder run at startup\"; tasks.md 1.3 \"run migrations on startup\"; spec.md \"schema applied through sqlx migrations on startup\"",
+      "note": ""
+    },
+    {
+      "id": "req.config",
+      "present": true,
+      "needs_review": false,
+      "evidence": "tasks.md 1.3: \"DATABASE_URL default sqlite:todos.db, HOST/PORT defaults\"; spec.md \"HOST (default 127.0.0.1) and PORT (default 8080)\"",
+      "note": ""
+    },
+    {
+      "id": "req.health",
+      "present": true,
+      "needs_review": false,
+      "evidence": "tasks.md 1.3: \"expose GET /health \u2192 200 { status: ok }\"; spec.md \"GET /health returning 200 with { status: ok }\"",
+      "note": ""
+    },
+    {
+      "id": "req.tests",
+      "present": true,
+      "needs_review": false,
+      "evidence": "tasks.md 3.1: \"integration suite: create, list, filter, get, patch, delete; empty/overlong title; 404 get/patch/delete\"; spec.md Integration test coverage requirement",
+      "note": ""
+    }
+  ],
+  "depth_ok": true,
+  "depth_needs_review": false,
+  "depth_note": "Structured proposal \u2192 design \u2192 spec \u2192 tasks with S01/S02/S03 milestones and checkbox tasks with inputs/outputs/validate",
+  "guardrails_ok": true,
+  "guardrails_needs_review": false,
+  "guardrails_note": "proposal.md + tasks.md: Task Handoff Gate (pause after each task), Remote Mutation Rule (no push/PR without approval), tasks.md Stop: \"Do not implement until explicit human approval\"",
+  "summary_note": "Comprehensive locked-SPEC plan; all f1 checklist items explicitly covered in spec.md and tasks.md",
+  "drafted_at": "2026-07-30T15:27:05+00:00",
+  "driver_wall_seconds": 79.1
+}

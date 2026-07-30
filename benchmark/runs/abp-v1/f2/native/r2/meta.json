@@ -1,0 +1,41 @@
+{
+  "protocol": "abp-v1",
+  "run_id": "abp-v1-f2-native-r2",
+  "arm": "native",
+  "fixture": "f2",
+  "fixture_id": "todo-api-ambiguous",
+  "replicate": 2,
+  "skill": null,
+  "skill_hash": null,
+  "fixture_hash": "e6e1ecf556a3420f4baae07429ab3040a31f5f50c9017595edbc24ee21735a89",
+  "model": "composer-2.5",
+  "transcript_ref": null,
+  "created_at": "2026-07-30T10:46:19.309375+00:00",
+  "started_at": "2026-07-30T13:57:49.443786+00:00",
+  "ended_at": "2026-07-30T13:58:32.908107+00:00",
+  "wall_clock_seconds": 43,
+  "tokens": {
+    "tiktoken": {
+      "total": 3483,
+      "encoding": "cl100k_base"
+    },
+    "cursor_ui": {
+      "total": null,
+      "notes": ""
+    },
+    "estimate_chars": {
+      "total": 3373
+    }
+  },
+  "tool_calls": 19,
+  "artifact_paths": [
+    "artifacts/DESIGN_SUMMARY.md",
+    "artifacts/IMPLEMENTATION_PLAN.md",
+    "artifacts/TEST_PLAN.md"
+  ],
+  "status": "scored",
+  "notes": "",
+  "driver_wall_seconds": 159.0,
+  "driver_exit_code": 0,
+  "driver_log": "benchmark/runs/abp-v1/_driver_logs/f2-native-r2.log"
+}

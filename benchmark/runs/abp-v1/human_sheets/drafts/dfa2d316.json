@@ -1,0 +1,80 @@
+{
+  "blind_id": "dfa2d316",
+  "fixture": "f2",
+  "scorer": "agent-draft",
+  "model": "composer-2.5",
+  "items": [
+    {
+      "id": "dec.stack",
+      "present": true,
+      "needs_review": false,
+      "evidence": "IMPLEMENTATION_PLAN.md: \"Rust + Tokio\", \"Axum\", \"SQLite via sqlx\"; DESIGN_SUMMARY.md Q1/Q2: \"Rust + Axum + Tokio\", \"SQLite via sqlx\"",
+      "note": ""
+    },
+    {
+      "id": "dec.model",
+      "present": true,
+      "needs_review": false,
+      "evidence": "IMPLEMENTATION_PLAN.md Data model: \"id\" (UUID string), \"title\", \"completed\", \"created_at\", \"updated_at\" (RFC 3339 UTC); DESIGN_SUMMARY.md Q7 same fields",
+      "note": ""
+    },
+    {
+      "id": "dec.routes",
+      "present": true,
+      "needs_review": false,
+      "evidence": "IMPLEMENTATION_PLAN.md Steps 6\u201311: GET /health; POST/GET/PATCH/DELETE /todos and GET /todos/:id; DESIGN_SUMMARY.md Q3: \"POST/GET/PATCH/DELETE /todos\", \"GET /todos/:id\", \"GET /health\"",
+      "note": ""
+    },
+    {
+      "id": "dec.filter",
+      "present": true,
+      "needs_review": false,
+      "evidence": "IMPLEMENTATION_PLAN.md Step 8: \"Optional query: completed=true or completed=false\"; TEST_PLAN.md List filter section with filter true/false tests",
+      "note": ""
+    },
+    {
+      "id": "dec.validation",
+      "present": true,
+      "needs_review": false,
+      "evidence": "IMPLEMENTATION_PLAN.md: \"title\" length \"1..=200\"; Step 7: \"Empty/whitespace-only title or title longer than 200 \u2192 400 validation_error\"",
+      "note": ""
+    },
+    {
+      "id": "dec.errors",
+      "present": true,
+      "needs_review": false,
+      "evidence": "IMPLEMENTATION_PLAN.md Error envelope: \"{ \\\"error\\\": { \\\"code\\\": \\\"string_snake_case\\\", \\\"message\\\": \\\"human readable\\\" } }\" with validation_error, not_found, internal_error",
+      "note": ""
+    },
+    {
+      "id": "dec.config",
+      "present": true,
+      "needs_review": false,
+      "evidence": "IMPLEMENTATION_PLAN.md Configuration table: DATABASE_URL (default sqlite:todos.db), HOST (127.0.0.1), PORT (8080); DESIGN_SUMMARY.md Q8 same env vars",
+      "note": ""
+    },
+    {
+      "id": "dec.tests",
+      "present": true,
+      "needs_review": false,
+      "evidence": "TEST_PLAN.md: \"Required integration tests\" covering CRUD, filter, validation, 404, health, error envelope; IMPLEMENTATION_PLAN.md Steps 13\u201314 integration harness and suite",
+      "note": ""
+    },
+    {
+      "id": "dec.oos",
+      "present": true,
+      "needs_review": false,
+      "evidence": "IMPLEMENTATION_PLAN.md Out of scope: \"Authentication / authorization... pagination... web UI / mobile client\"; DESIGN_SUMMARY.md: \"No auth for v1\", excludes UI and pagination",
+      "note": ""
+    }
+  ],
+  "depth_ok": true,
+  "depth_needs_review": false,
+  "depth_note": "15 ordered implementation steps with validation gates, module layout, schema, routes, and dedicated TEST_PLAN with numbered scenarios",
+  "guardrails_ok": true,
+  "guardrails_needs_review": false,
+  "guardrails_note": "IMPLEMENTATION_PLAN.md: \"Planning only \u2014 do not implement in the benchmark session\"; DESIGN_SUMMARY.md: \"no implementation in this session\"",
+  "summary_note": "Native-arm f2 plan with explicit assumed-answer table for ambiguous ticket; all decision checklist items documented across DESIGN_SUMMARY, IMPLEMENTATION_PLAN, and TEST_PLAN.",
+  "drafted_at": "2026-07-30T16:09:09+00:00",
+  "driver_wall_seconds": 106.9
+}

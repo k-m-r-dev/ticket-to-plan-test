@@ -1,0 +1,13 @@
+{
+  "blind_id": "dfa2d316",
+  "run_dir": "benchmark/runs/abp-v1/f2/native/r1",
+  "arm": "native",
+  "fixture": "f2",
+  "replicate": 1,
+  "coverage_ratio": 1.0,
+  "items_scored": 9,
+  "items_total": 9,
+  "depth_ok": true,
+  "guardrails_ok": true,
+  "complete": true
+}

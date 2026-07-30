@@ -1,0 +1,13 @@
+/Users/khandkermahmudur/Workspace/openspec-test/.venv/lib/python3.14/site-packages/deepeval/evaluate/execute/loop.py:813: SyntaxWarning: 'return' in a 'finally' block
+  return
+ss                                                                       [100%]Running teardown with pytest sessionfinish...
+
+Test test_deepeval_s3.py::test_jsonl_exists_or_skip was skipped. Reason: 
+('/Users/khandkermahmudur/Workspace/openspec-test/benchmark/acceptance/test_deep
+eval_s3.py', 36, 'Skipped: No export.jsonl rows yet — run export_jsonl.py after 
+plan_ready runs')
+Test test_deepeval_s3.py::test_deepeval_faithfulness_or_skip was skipped. 
+Reason: 
+('/Users/khandkermahmudur/Workspace/openspec-test/benchmark/acceptance/test_deep
+eval_s3.py', 41, 'Skipped: no rows')
+2 skipped in 0.01s

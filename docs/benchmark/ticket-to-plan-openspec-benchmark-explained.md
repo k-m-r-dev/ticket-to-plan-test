@@ -316,6 +316,8 @@ flowchart LR
 
 ## 11. Cons and risks (talking points — be explicit in the deck)
 
+> **How we close these (not narrative):** see frozen [`PROTOCOL.md`](PROTOCOL.md) (abp-v1) — n=3, F1+F2, blind human S2 + DeepEval S3, TikToken cost signals, execute-to-score, pre-registered pass rules. Current [`benchmark/runs/bench-todo-*`](../../benchmark/runs/) results are **[`v0-EXPLORATORY`](v0-EXPLORATORY.md)** only. Decision-grade claims require [`ACCEPTANCE_REPORT.md`](ACCEPTANCE_REPORT.md).
+
 ### A. Measurement caveats
 
 - **n=1** only; no variance / statistical claim yet (schema supports repeats).

@@ -1,0 +1,163 @@
+{
+  "run_id": "benchmark/runs/abp-v1/f1/openspec/r2",
+  "arm": "openspec",
+  "requirement_coverage": {
+    "items": [
+      {
+        "id": "req.stack",
+        "present": true,
+        "text": "Rust Axum Tokio SQLite sqlx"
+      },
+      {
+        "id": "req.model",
+        "present": true,
+        "text": "Todo fields id title completed created_at updated_at"
+      },
+      {
+        "id": "req.post",
+        "present": true,
+        "text": "POST /todos create 201"
+      },
+      {
+        "id": "req.get_list",
+        "present": true,
+        "text": "GET /todos list"
+      },
+      {
+        "id": "req.filter",
+        "present": true,
+        "text": "completed query filter"
+      },
+      {
+        "id": "req.get_one",
+        "present": true,
+        "text": "GET /todos/:id"
+      },
+      {
+        "id": "req.patch",
+        "present": true,
+        "text": "PATCH /todos/:id"
+      },
+      {
+        "id": "req.delete",
+        "present": true,
+        "text": "DELETE /todos/:id 204"
+      },
+      {
+        "id": "req.validation",
+        "present": true,
+        "text": "title validation 1..=200"
+      },
+      {
+        "id": "req.errors",
+        "present": true,
+        "text": "error JSON code message"
+      },
+      {
+        "id": "req.migrations",
+        "present": true,
+        "text": "sqlx migrations on startup"
+      },
+      {
+        "id": "req.config",
+        "present": true,
+        "text": "DATABASE_URL HOST PORT"
+      },
+      {
+        "id": "req.health",
+        "present": true,
+        "text": "GET /health"
+      },
+      {
+        "id": "req.tests",
+        "present": true,
+        "text": "integration tests CRUD validation 404"
+      }
+    ],
+    "present_count": 14,
+    "total": 14,
+    "ratio": 1.0
+  },
+  "plan_depth": {
+    "items": [
+      {
+        "id": "depth.proposal",
+        "present": true,
+        "text": "proposal.md"
+      },
+      {
+        "id": "depth.specs",
+        "present": true,
+        "text": "specs requirements"
+      },
+      {
+        "id": "depth.design",
+        "present": true,
+        "text": "design.md"
+      },
+      {
+        "id": "depth.tasks",
+        "present": true,
+        "text": "tasks.md checklist"
+      }
+    ],
+    "present_count": 4,
+    "total": 4,
+    "ratio": 1.0
+  },
+  "guardrail_fidelity": {
+    "applicable": true,
+    "items": [
+      {
+        "id": "gr.delivery_map",
+        "present": true,
+        "text": "Delivery and Guardrails or Required Milestone Map fields"
+      },
+      {
+        "id": "gr.handoff",
+        "present": true,
+        "text": "Task Handoff Gate cited or equivalent pause-after-task"
+      },
+      {
+        "id": "gr.no_remote",
+        "present": true,
+        "text": "no push/PR without approval"
+      },
+      {
+        "id": "gr.human_approval",
+        "present": true,
+        "text": "human approval before execution"
+      }
+    ],
+    "present_count": 4,
+    "total": 4,
+    "ratio": 1.0
+  },
+  "artifact_bulk": {
+    "file_count": 5,
+    "bytes": 24832
+  },
+  "hallucination_penalty": {
+    "hits": [],
+    "count": 0
+  },
+  "overplanning_penalty": {
+    "hits": [],
+    "count": 0
+  },
+  "wall_clock_seconds": 28,
+  "tokens": {
+    "tiktoken": {
+      "total": 7989,
+      "encoding": "cl100k_base"
+    },
+    "cursor_ui": {
+      "total": null,
+      "notes": ""
+    },
+    "estimate_chars": {
+      "total": 7863
+    }
+  },
+  "tool_calls": 30
+}

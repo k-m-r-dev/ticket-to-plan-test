@@ -1,0 +1,80 @@
+{
+  "blind_id": "571d4e3a",
+  "fixture": "f2",
+  "scorer": "agent-draft",
+  "model": "composer-2.5",
+  "items": [
+    {
+      "id": "dec.stack",
+      "present": true,
+      "needs_review": false,
+      "evidence": "CLARIFICATIONS.md: \"Rust with Axum on Tokio\"; \"SQLite via sqlx with migrations\"; design.md D1: \"Rust binary with Axum on Tokio; SQLite via sqlx\"",
+      "note": ""
+    },
+    {
+      "id": "dec.model",
+      "present": true,
+      "needs_review": false,
+      "evidence": "CLARIFICATIONS.md: \"id (UUID string), title (string), completed (bool), created_at / updated_at (RFC3339 strings)\"; spec.md: \"id (server-generated UUID string), title (string), completed (boolean), created_at (RFC 3339 UTC), and updated_at\"",
+      "note": ""
+    },
+    {
+      "id": "dec.routes",
+      "present": true,
+      "needs_review": false,
+      "evidence": "CLARIFICATIONS.md: \"POST /todos, GET /todos, GET /todos/:id, PATCH /todos/:id, DELETE /todos/:id, GET /health\"; design.md D3 lists same routes with status codes",
+      "note": ""
+    },
+    {
+      "id": "dec.filter",
+      "present": true,
+      "needs_review": false,
+      "evidence": "design.md D5: \"GET /todos?completed=true|false\"; spec.md: \"Optional query completed=true or completed=false MUST filter results\"",
+      "note": ""
+    },
+    {
+      "id": "dec.validation",
+      "present": true,
+      "needs_review": false,
+      "evidence": "design.md D7: \"trim title then enforce length 1..=200\"; spec.md: \"titles longer than 200 characters MUST return 400\"; CLARIFICATIONS.md: \"reject empty/whitespace-only or length > 200\"",
+      "note": ""
+    },
+    {
+      "id": "dec.errors",
+      "present": true,
+      "needs_review": false,
+      "evidence": "CLARIFICATIONS.md: {\"error\":{\"code\":\"<string>\",\"message\":\"<string>\"}} with codes validation_error, not_found, internal_error\"; design.md D4: \"Central AppError \u2192 { error: { code, message } }\"",
+      "note": ""
+    },
+    {
+      "id": "dec.config",
+      "present": true,
+      "needs_review": false,
+      "evidence": "CLARIFICATIONS.md: \"DATABASE_URL (default sqlite:todos.db), HOST (default 127.0.0.1), PORT (default 8080)\"; design.md D8 repeats same env vars and defaults",
+      "note": ""
+    },
+    {
+      "id": "dec.tests",
+      "present": true,
+      "needs_review": false,
+      "evidence": "proposal.md: \"In-process integration tests for CRUD, validation, filter, and 404 paths\"; tasks.md 3.1: \"Complete in-process HTTP integration suite: create, list, filter, get, patch, delete\"; spec.md Requirement: Integration test coverage",
+      "note": ""
+    },
+    {
+      "id": "dec.oos",
+      "present": true,
+      "needs_review": false,
+      "evidence": "CLARIFICATIONS.md Out of scope: \"No auth, ... UI, ... pagination beyond completed filter\"; spec.md Requirement: Out of scope: \"SHALL NOT require authentication, ... pagination, sorting, UI\"",
+      "note": ""
+    }
+  ],
+  "depth_ok": true,
+  "depth_needs_review": false,
+  "depth_note": "proposal \u2192 specs/todo-api/spec.md \u2192 design.md (D1\u2013D10) \u2192 tasks.md (S01\u2013S03 with numbered checkboxes and validation steps)",
+  "guardrails_ok": true,
+  "guardrails_needs_review": false,
+  "guardrails_note": "proposal.md/tasks.md: Task Handoff Gate (pause after each task; wait for explicit do next); Remote Mutation Rule (no push/PR without explicit user approval); tasks.md Stop: Do not run /opsx-apply until explicit human approval",
+  "summary_note": "f2 ambiguous-ticket plan with documented grilling assumptions in CLARIFICATIONS.md; all nine decision items explicitly covered across clarifications, spec, design, and tasks.",
+  "drafted_at": "2026-07-30T15:56:13+00:00",
+  "driver_wall_seconds": 75.4
+}

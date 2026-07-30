@@ -1,0 +1,115 @@
+{
+  "blind_id": "0d44568b",
+  "fixture": "f1",
+  "scorer": "agent-draft",
+  "model": "composer-2.5",
+  "items": [
+    {
+      "id": "req.stack",
+      "present": true,
+      "needs_review": false,
+      "evidence": "DESIGN_SUMMARY.md: \"Axum + Tokio + sqlx SQLite\"; 03-01-PLAN.md T01: axum, tokio, sqlx (sqlite + runtime + migrate)",
+      "note": ""
+    },
+    {
+      "id": "req.model",
+      "present": true,
+      "needs_review": false,
+      "evidence": "03-01-PLAN.md Must-Haves: \"todos with id/title/completed/created_at/updated_at\"; 03-02-PLAN.md T01: Todo JSON shape (id, title, completed, created_at/updated_at)",
+      "note": ""
+    },
+    {
+      "id": "req.post",
+      "present": true,
+      "needs_review": false,
+      "evidence": "03-02-PLAN.md T02: \"POST /todos: body {title, completed?}; ... 201 full Todo\"",
+      "note": ""
+    },
+    {
+      "id": "req.get_list",
+      "present": true,
+      "needs_review": false,
+      "evidence": "03-02-PLAN.md T02: \"GET /todos: optional completed=true|false; 200 array\"",
+      "note": ""
+    },
+    {
+      "id": "req.filter",
+      "present": true,
+      "needs_review": false,
+      "evidence": "03-02-PLAN.md T02: \"GET /todos: optional completed=true|false\"; 03-ROADMAP.md: \"completion filter\"",
+      "note": ""
+    },
+    {
+      "id": "req.get_one",
+      "present": true,
+      "needs_review": false,
+      "evidence": "03-02-PLAN.md T02: \"GET /todos/:id: 200 or 404 not_found\"",
+      "note": ""
+    },
+    {
+      "id": "req.patch",
+      "present": true,
+      "needs_review": false,
+      "evidence": "03-02-PLAN.md T03: \"PATCH /todos/:id: subset of title/completed; ... 200 or 404\"",
+      "note": ""
+    },
+    {
+      "id": "req.delete",
+      "present": true,
+      "needs_review": false,
+      "evidence": "03-02-PLAN.md T03: \"DELETE /todos/:id: 204 empty body or 404\"",
+      "note": ""
+    },
+    {
+      "id": "req.validation",
+      "present": true,
+      "needs_review": false,
+      "evidence": "03-02-PLAN.md T01: \"Title trim + length 1..=200 helper\"; T02: \"400 validation_error for empty/whitespace/overlong title\"",
+      "note": ""
+    },
+    {
+      "id": "req.errors",
+      "present": true,
+      "needs_review": false,
+      "evidence": "03-02-PLAN.md T01: \"Shared ApiError \u2192 {error:{code,message}} with validation_error, not_found, internal_error\"",
+      "note": ""
+    },
+    {
+      "id": "req.migrations",
+      "present": true,
+      "needs_review": false,
+      "evidence": "03-01-PLAN.md T02: \"run migrations on startup\"; 03-ROADMAP.md: \"SQLite schema applied via sqlx migrations on startup\"",
+      "note": ""
+    },
+    {
+      "id": "req.config",
+      "present": true,
+      "needs_review": false,
+      "evidence": "03-01-PLAN.md T02: \"Read HOST (default 127.0.0.1), PORT (default 8080), DATABASE_URL (default sqlite:todos.db)\"",
+      "note": ""
+    },
+    {
+      "id": "req.health",
+      "present": true,
+      "needs_review": false,
+      "evidence": "03-01-PLAN.md T03: \"Implement GET /health \u2192 200 {\"status\":\"ok\"}\"",
+      "note": ""
+    },
+    {
+      "id": "req.tests",
+      "present": true,
+      "needs_review": false,
+      "evidence": "03-ROADMAP.md: \"Integration tests cover create, list, filter, get, patch, delete, validation, and 404 paths\"; 03-03-PLAN.md T01\u2013T02 detail in-process CRUD, validation, and 404 tests",
+      "note": ""
+    }
+  ],
+  "depth_ok": true,
+  "depth_needs_review": false,
+  "depth_note": "Roadmap S01\u2013S03 with per-slice tasks (T01\u2013T03), files, verification commands, and Must-Haves",
+  "guardrails_ok": true,
+  "guardrails_needs_review": false,
+  "guardrails_note": "03-ROADMAP.md: \"human approval before execution\"; Task Handoff Gate (pause, wait for do next); Remote Mutation Rule (no push/PR without approval)",
+  "summary_note": "Comprehensive locked-SPEC plan; all f1 checklist items explicitly covered across roadmap and slice plans.",
+  "drafted_at": "2026-07-30T15:02:32+00:00",
+  "driver_wall_seconds": 72.3
+}

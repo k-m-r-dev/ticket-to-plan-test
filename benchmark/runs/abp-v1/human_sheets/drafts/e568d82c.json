@@ -1,0 +1,115 @@
+{
+  "blind_id": "e568d82c",
+  "fixture": "f1",
+  "scorer": "agent-draft",
+  "model": "composer-2.5",
+  "items": [
+    {
+      "id": "req.stack",
+      "present": true,
+      "needs_review": false,
+      "evidence": "design.md: \"Rust + Axum + Tokio + SQLite via `sqlx`\"",
+      "note": ""
+    },
+    {
+      "id": "req.model",
+      "present": true,
+      "needs_review": false,
+      "evidence": "tasks.md 2.1: `Todo` struct (`id: Uuid`, `title: String`, `completed: bool`, `created_at: DateTime<Utc>`, `updated_at: DateTime<Utc>`)",
+      "note": ""
+    },
+    {
+      "id": "req.post",
+      "present": true,
+      "needs_review": false,
+      "evidence": "tasks.md 5.1: \"Implement `POST /todos` handler... persist, return `201`\"",
+      "note": ""
+    },
+    {
+      "id": "req.get_list",
+      "present": true,
+      "needs_review": false,
+      "evidence": "proposal.md: \"GET /todos\" (with optional completed filter); tasks.md 5.2 lists handler returning `200` JSON array",
+      "note": ""
+    },
+    {
+      "id": "req.filter",
+      "present": true,
+      "needs_review": false,
+      "evidence": "spec.md: \"GET /todos with an optional `completed` query parameter (`true` or `false`)\"; tasks.md 3.2 and 6.2 cover filter parsing and tests",
+      "note": ""
+    },
+    {
+      "id": "req.get_one",
+      "present": true,
+      "needs_review": false,
+      "evidence": "proposal.md: \"GET /todos/:id\"; tasks.md 5.3: handler returning `200`/Todo or `404`/`not_found`",
+      "note": ""
+    },
+    {
+      "id": "req.patch",
+      "present": true,
+      "needs_review": false,
+      "evidence": "proposal.md: \"PATCH /todos/:id\"; tasks.md 5.4: partial updates with `200`/updated Todo or `400`/`404`",
+      "note": ""
+    },
+    {
+      "id": "req.delete",
+      "present": true,
+      "needs_review": false,
+      "evidence": "tasks.md 5.5: \"DELETE /todos/:id` handler returning `204` empty body or `404`/`not_found`\"",
+      "note": ""
+    },
+    {
+      "id": "req.validation",
+      "present": true,
+      "needs_review": false,
+      "evidence": "tasks.md 3.1: \"trim; reject empty/whitespace-only; reject length > 200\"; unit tests for exactly-200-char (valid) and 201-char (invalid)",
+      "note": ""
+    },
+    {
+      "id": "req.errors",
+      "present": true,
+      "needs_review": false,
+      "evidence": "tasks.md 2.3: `AppError` maps to `{ \"error\": { \"code\", \"message\" } }` with codes `validation_error`, `not_found`, `internal_error`",
+      "note": ""
+    },
+    {
+      "id": "req.migrations",
+      "present": true,
+      "needs_review": false,
+      "evidence": "design.md: \"migrations via `sqlx::migrate!` embedded at build time, run once at startup before the listener binds\"",
+      "note": ""
+    },
+    {
+      "id": "req.config",
+      "present": true,
+      "needs_review": false,
+      "evidence": "tasks.md 1.3: config loading for `DATABASE_URL` (default `sqlite:todos.db`), `HOST` (default `127.0.0.1`), `PORT` (default `8080`)",
+      "note": ""
+    },
+    {
+      "id": "req.health",
+      "present": true,
+      "needs_review": false,
+      "evidence": "spec.md: \"GET /health returning `200` with `{ \"status\": \"ok\" }`\"; tasks.md 5.6 implements health handler",
+      "note": ""
+    },
+    {
+      "id": "req.tests",
+      "present": true,
+      "needs_review": false,
+      "evidence": "proposal.md: \"integration tests covering create, list, list-with-filter, get, patch, delete, and all specified validation/404 error paths\"; tasks.md section 6 details CRUD, validation, and 404 tests",
+      "note": ""
+    }
+  ],
+  "depth_ok": true,
+  "depth_needs_review": false,
+  "depth_note": "Seven numbered task groups with checkbox items, inputs/outputs, and validation gates (tasks.md sections 1\u20137).",
+  "guardrails_ok": true,
+  "guardrails_needs_review": false,
+  "guardrails_note": "design.md/tasks.md: Task Handoff Gate (pause after each task, wait for `do next`); Remote Mutation Rule (no push/PR without explicit user approval).",
+  "summary_note": "Comprehensive OpenSpec-style plan with proposal, spec, design, and granular tasks; all f1 checklist items explicitly covered.",
+  "drafted_at": "2026-07-30T15:50:23+00:00",
+  "driver_wall_seconds": 73.9
+}

@@ -1,0 +1,146 @@
+{
+  "6aa775b7": {
+    "run_dir": "benchmark/runs/abp-v1/f1/gsd/r1",
+    "arm": "gsd",
+    "fixture": "f1",
+    "replicate": 1
+  },
+  "0d44568b": {
+    "run_dir": "benchmark/runs/abp-v1/f1/gsd/r2",
+    "arm": "gsd",
+    "fixture": "f1",
+    "replicate": 2
+  },
+  "e8a975ba": {
+    "run_dir": "benchmark/runs/abp-v1/f1/gsd/r3",
+    "arm": "gsd",
+    "fixture": "f1",
+    "replicate": 3
+  },
+  "655bc1d2": {
+    "run_dir": "benchmark/runs/abp-v1/f1/native/r1",
+    "arm": "native",
+    "fixture": "f1",
+    "replicate": 1
+  },
+  "d3b435ee": {
+    "run_dir": "benchmark/runs/abp-v1/f1/native/r2",
+    "arm": "native",
+    "fixture": "f1",
+    "replicate": 2
+  },
+  "d01b78f9": {
+    "run_dir": "benchmark/runs/abp-v1/f1/native/r3",
+    "arm": "native",
+    "fixture": "f1",
+    "replicate": 3
+  },
+  "9800bf3f": {
+    "run_dir": "benchmark/runs/abp-v1/f1/no-tools/r1",
+    "arm": "no-tools",
+    "fixture": "f1",
+    "replicate": 1
+  },
+  "5042d064": {
+    "run_dir": "benchmark/runs/abp-v1/f1/no-tools/r2",
+    "arm": "no-tools",
+    "fixture": "f1",
+    "replicate": 2
+  },
+  "44636e47": {
+    "run_dir": "benchmark/runs/abp-v1/f1/no-tools/r3",
+    "arm": "no-tools",
+    "fixture": "f1",
+    "replicate": 3
+  },
+  "90e468b4": {
+    "run_dir": "benchmark/runs/abp-v1/f1/openspec/r1",
+    "arm": "openspec",
+    "fixture": "f1",
+    "replicate": 1
+  },
+  "e568d82c": {
+    "run_dir": "benchmark/runs/abp-v1/f1/openspec/r2",
+    "arm": "openspec",
+    "fixture": "f1",
+    "replicate": 2
+  },
+  "c6e23d9c": {
+    "run_dir": "benchmark/runs/abp-v1/f1/openspec/r3",
+    "arm": "openspec",
+    "fixture": "f1",
+    "replicate": 3
+  },
+  "fb39e57a": {
+    "run_dir": "benchmark/runs/abp-v1/f2/gsd/r1",
+    "arm": "gsd",
+    "fixture": "f2",
+    "replicate": 1
+  },
+  "97db491f": {
+    "run_dir": "benchmark/runs/abp-v1/f2/gsd/r2",
+    "arm": "gsd",
+    "fixture": "f2",
+    "replicate": 2
+  },
+  "a557aa1a": {
+    "run_dir": "benchmark/runs/abp-v1/f2/gsd/r3",
+    "arm": "gsd",
+    "fixture": "f2",
+    "replicate": 3
+  },
+  "dfa2d316": {
+    "run_dir": "benchmark/runs/abp-v1/f2/native/r1",
+    "arm": "native",
+    "fixture": "f2",
+    "replicate": 1
+  },
+  "2fa96b41": {
+    "run_dir": "benchmark/runs/abp-v1/f2/native/r2",
+    "arm": "native",
+    "fixture": "f2",
+    "replicate": 2
+  },
+  "9756bcf9": {
+    "run_dir": "benchmark/runs/abp-v1/f2/native/r3",
+    "arm": "native",
+    "fixture": "f2",
+    "replicate": 3
+  },
+  "bb66c8df": {
+    "run_dir": "benchmark/runs/abp-v1/f2/no-tools/r1",
+    "arm": "no-tools",
+    "fixture": "f2",
+    "replicate": 1
+  },
+  "825fb86c": {
+    "run_dir": "benchmark/runs/abp-v1/f2/no-tools/r2",
+    "arm": "no-tools",
+    "fixture": "f2",
+    "replicate": 2
+  },
+  "72035eae": {
+    "run_dir": "benchmark/runs/abp-v1/f2/no-tools/r3",
+    "arm": "no-tools",
+    "fixture": "f2",
+    "replicate": 3
+  },
+  "d87d1e37": {
+    "run_dir": "benchmark/runs/abp-v1/f2/openspec/r1",
+    "arm": "openspec",
+    "fixture": "f2",
+    "replicate": 1
+  },
+  "571d4e3a": {
+    "run_dir": "benchmark/runs/abp-v1/f2/openspec/r2",
+    "arm": "openspec",
+    "fixture": "f2",
+    "replicate": 2
+  },
+  "03b6424c": {
+    "run_dir": "benchmark/runs/abp-v1/f2/openspec/r3",
+    "arm": "openspec",
+    "fixture": "f2",
+    "replicate": 3
+  }
+}

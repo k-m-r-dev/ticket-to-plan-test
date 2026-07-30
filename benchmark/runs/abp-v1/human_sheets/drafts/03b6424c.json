@@ -1,0 +1,80 @@
+{
+  "blind_id": "03b6424c",
+  "fixture": "f2",
+  "scorer": "agent-draft",
+  "model": "composer-2.5",
+  "items": [
+    {
+      "id": "dec.stack",
+      "present": true,
+      "needs_review": false,
+      "evidence": "CLARIFICATIONS.md: \"Rust with Axum on Tokio\"; \"SQLite via sqlx with migrations\"; design.md D1: \"Rust binary with Axum on Tokio; SQLite via sqlx\"",
+      "note": ""
+    },
+    {
+      "id": "dec.model",
+      "present": true,
+      "needs_review": false,
+      "evidence": "CLARIFICATIONS.md: \"id (UUID string), title (string), completed (bool), created_at / updated_at (RFC3339 strings)\"; spec.md: \"id (server-generated UUID string), title, completed, created_at, updated_at\"",
+      "note": ""
+    },
+    {
+      "id": "dec.routes",
+      "present": true,
+      "needs_review": false,
+      "evidence": "CLARIFICATIONS.md: \"POST /todos, GET /todos, GET /todos/:id, PATCH /todos/:id, DELETE /todos/:id, GET /health\"; design.md D3 lists same CRUD + /health with status codes",
+      "note": ""
+    },
+    {
+      "id": "dec.filter",
+      "present": true,
+      "needs_review": false,
+      "evidence": "CLARIFICATIONS.md: \"Optional completed=true|false on GET /todos\"; design.md D5: \"GET /todos?completed=true|false\"; tasks.md 2.3",
+      "note": ""
+    },
+    {
+      "id": "dec.validation",
+      "present": true,
+      "needs_review": false,
+      "evidence": "CLARIFICATIONS.md: \"reject empty/whitespace-only or length > 200\"; design.md D7: \"trim title then enforce length 1..=200\"",
+      "note": ""
+    },
+    {
+      "id": "dec.errors",
+      "present": true,
+      "needs_review": false,
+      "evidence": "CLARIFICATIONS.md: \"{\\\"error\\\":{\\\"code\\\":\\\"<string>\\\",\\\"message\\\":\\\"<string>\\\"}}\"; spec.md: \"{ \\\"error\\\": { \\\"code\\\": \\\"string_snake_case\\\", \\\"message\\\": \\\"human readable\\\" } }\"",
+      "note": ""
+    },
+    {
+      "id": "dec.config",
+      "present": true,
+      "needs_review": false,
+      "evidence": "CLARIFICATIONS.md: \"DATABASE_URL (default sqlite:todos.db), HOST (default 127.0.0.1), PORT (default 8080)\"; design.md D8",
+      "note": ""
+    },
+    {
+      "id": "dec.tests",
+      "present": true,
+      "needs_review": false,
+      "evidence": "CLARIFICATIONS.md: \"in-process axum/tower tests with temp sqlite + migrations\"; tasks.md 3.1: \"Complete in-process HTTP integration suite: create, list, filter, get, patch, delete...\"",
+      "note": ""
+    },
+    {
+      "id": "dec.oos",
+      "present": true,
+      "needs_review": false,
+      "evidence": "CLARIFICATIONS.md Out of scope: \"No auth... UI... pagination beyond completed filter\"; proposal.md: \"No auth, UI, multi-tenant, or pagination in v1\"",
+      "note": ""
+    }
+  ],
+  "depth_ok": true,
+  "depth_needs_review": false,
+  "depth_note": "Three slices (S01\u2013S03) with numbered tasks (1.1\u20133.2), inputs/outputs/validate per task; proposal \u2192 spec \u2192 design \u2192 tasks",
+  "guardrails_ok": true,
+  "guardrails_needs_review": false,
+  "guardrails_note": "proposal.md/tasks.md: Task Handoff Gate (pause, wait for do next); Remote Mutation Rule (no push/PR without approval); tasks.md Stop: no implement until human approval",
+  "summary_note": "Ambiguous-ticket plan with documented grilling assumptions; all f2 decision checklist items explicitly resolved across CLARIFICATIONS, spec, design, and tasks.",
+  "drafted_at": "2026-07-30T15:53:20+00:00",
+  "driver_wall_seconds": 75.1
+}

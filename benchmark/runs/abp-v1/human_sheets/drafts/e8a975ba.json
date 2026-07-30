@@ -1,0 +1,115 @@
+{
+  "blind_id": "e8a975ba",
+  "fixture": "f1",
+  "scorer": "agent-draft",
+  "model": "composer-2.5",
+  "items": [
+    {
+      "id": "req.stack",
+      "present": true,
+      "needs_review": false,
+      "evidence": "DESIGN_SUMMARY.md: 'Axum + Tokio + sqlx SQLite'; 04-01-PLAN.md T01 lists axum, tokio, sqlx (sqlite + runtime + migrate)",
+      "note": ""
+    },
+    {
+      "id": "req.model",
+      "present": true,
+      "needs_review": false,
+      "evidence": "04-02-PLAN.md T01: 'Todo JSON model (id UUID string, title, completed, created_at/updated_at RFC3339 UTC)'; 04-01-PLAN.md T02 migration lists id, title, completed, created_at, updated_at",
+      "note": ""
+    },
+    {
+      "id": "req.post",
+      "present": true,
+      "needs_review": false,
+      "evidence": "04-02-PLAN.md T02: 'POST /todos: body {title, completed?}; ... 201 full Todo'",
+      "note": ""
+    },
+    {
+      "id": "req.get_list",
+      "present": true,
+      "needs_review": false,
+      "evidence": "04-02-PLAN.md T02: 'GET /todos: optional completed=true|false; ... 200 JSON array'",
+      "note": ""
+    },
+    {
+      "id": "req.filter",
+      "present": true,
+      "needs_review": false,
+      "evidence": "04-02-PLAN.md T02: 'GET /todos: optional completed=true|false'; 04-ROADMAP.md S02: 'filtered list'",
+      "note": ""
+    },
+    {
+      "id": "req.get_one",
+      "present": true,
+      "needs_review": false,
+      "evidence": "04-02-PLAN.md T02: 'GET /todos/:id: 200 or 404 not_found'",
+      "note": ""
+    },
+    {
+      "id": "req.patch",
+      "present": true,
+      "needs_review": false,
+      "evidence": "04-02-PLAN.md T03: 'PATCH /todos/:id: subset of title/completed; ... 200 or 404'",
+      "note": ""
+    },
+    {
+      "id": "req.delete",
+      "present": true,
+      "needs_review": false,
+      "evidence": "04-02-PLAN.md T03: 'DELETE /todos/:id: 204 empty or 404'",
+      "note": ""
+    },
+    {
+      "id": "req.validation",
+      "present": true,
+      "needs_review": false,
+      "evidence": "04-02-PLAN.md T02: 'trim title; length 1..=200'; 04-03-PLAN.md T03: 'overlong title (>200)'",
+      "note": ""
+    },
+    {
+      "id": "req.errors",
+      "present": true,
+      "needs_review": false,
+      "evidence": "04-02-PLAN.md T01: 'error JSON {error:{code,message}} with codes validation_error, not_found, internal_error'",
+      "note": ""
+    },
+    {
+      "id": "req.migrations",
+      "present": true,
+      "needs_review": false,
+      "evidence": "04-01-PLAN.md T02: 'run migrations on startup'; 04-ROADMAP.md: 'SQLite schema applied via sqlx migrations on startup'",
+      "note": ""
+    },
+    {
+      "id": "req.config",
+      "present": true,
+      "needs_review": false,
+      "evidence": "04-01-PLAN.md T02: 'Read HOST (default 127.0.0.1), PORT (default 8080), DATABASE_URL (default sqlite:todos.db)'",
+      "note": ""
+    },
+    {
+      "id": "req.health",
+      "present": true,
+      "needs_review": false,
+      "evidence": "04-01-PLAN.md T03: 'Implement GET /health \u2192 200 {\"status\":\"ok\"}'",
+      "note": ""
+    },
+    {
+      "id": "req.tests",
+      "present": true,
+      "needs_review": false,
+      "evidence": "04-ROADMAP.md: 'Integration tests cover create, list, filter, get, patch, delete, validation, and 404 paths'; 04-03-PLAN.md T02\u2013T03 detail CRUD, filter, 404, and validation test cases",
+      "note": ""
+    }
+  ],
+  "depth_ok": true,
+  "depth_needs_review": false,
+  "depth_note": "Milestone \u2192 3 slices (S01\u2013S03) \u2192 tasks with files, DoD, and verification commands",
+  "guardrails_ok": true,
+  "guardrails_needs_review": false,
+  "guardrails_note": "04-ROADMAP.md: 'human approval before execution'; Task Handoff Gate (pause, wait for do next); Remote Mutation Rule (no push/PR without approval)",
+  "summary_note": "All f1 checklist items explicitly covered across roadmap and slice plans; no items flagged for review.",
+  "drafted_at": "2026-07-30T15:51:50+00:00",
+  "driver_wall_seconds": 72.3
+}

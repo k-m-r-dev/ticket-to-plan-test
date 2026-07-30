@@ -1,0 +1,56 @@
+{
+  "blind_id": "95a259be",
+  "protocol": "abp-v1",
+  "fixture": "f2",
+  "instructions": "Score Yes/No without knowing which arm produced the plan. Do not open mapping_key.json.",
+  "items": [
+    {
+      "id": "dec.stack",
+      "text": "Rust Axum Tokio SQLite sqlx",
+      "present": null
+    },
+    {
+      "id": "dec.model",
+      "text": "Todo id title completed timestamps",
+      "present": null
+    },
+    {
+      "id": "dec.routes",
+      "text": "CRUD /todos and /health",
+      "present": null
+    },
+    {
+      "id": "dec.filter",
+      "text": "completed query filter",
+      "present": null
+    },
+    {
+      "id": "dec.validation",
+      "text": "title 1..=200",
+      "present": null
+    },
+    {
+      "id": "dec.errors",
+      "text": "error code message envelope",
+      "present": null
+    },
+    {
+      "id": "dec.config",
+      "text": "DATABASE_URL HOST PORT",
+      "present": null
+    },
+    {
+      "id": "dec.tests",
+      "text": "integration tests",
+      "present": null
+    },
+    {
+      "id": "dec.oos",
+      "text": "excludes auth UI pagination as required",
+      "present": null
+    }
+  ],
+  "depth_ok": null,
+  "guardrails_ok": null,
+  "notes": ""
+}

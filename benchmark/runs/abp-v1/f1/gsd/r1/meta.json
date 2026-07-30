@@ -1,0 +1,40 @@
+{
+  "protocol": "abp-v1",
+  "run_id": "abp-v1-f1-gsd-r1",
+  "arm": "gsd",
+  "fixture": "f1",
+  "fixture_id": "todo-api",
+  "replicate": 1,
+  "skill": "skills/ticket-to-plan-gsd/SKILL.md",
+  "skill_hash": "72839df045754a24bfde7dadc4fd2547ee7c3cd3bbfaa6a70c071806226c6149",
+  "fixture_hash": "df90965d2390ab6d5bc96a0f16057ca0db35fc2be0053d163d1ad99a6a15ac16",
+  "model": "Composer",
+  "transcript_ref": null,
+  "created_at": "2026-07-30T10:46:18.325837+00:00",
+  "started_at": "2026-07-30T11:34:38.404371+00:00",
+  "ended_at": "2026-07-30T11:40:06.485989+00:00",
+  "wall_clock_seconds": 328,
+  "tokens": {
+    "tiktoken": {
+      "total": 4824,
+      "encoding": "cl100k_base"
+    },
+    "cursor_ui": {
+      "total": null,
+      "notes": ""
+    },
+    "estimate_chars": {
+      "total": 4642
+    }
+  },
+  "tool_calls": 24,
+  "artifact_paths": [
+    "artifacts/01-01-PLAN.md",
+    "artifacts/01-02-PLAN.md",
+    "artifacts/01-03-PLAN.md",
+    "artifacts/01-ROADMAP.md",
+    "artifacts/DESIGN_SUMMARY.md"
+  ],
+  "status": "scored",
+  "notes": ""
+}

@@ -1,0 +1,123 @@
+{
+  "run_id": "benchmark/runs/abp-v1/f2/openspec/r2",
+  "arm": "openspec",
+  "requirement_coverage": {
+    "items": [
+      {
+        "id": "dec.stack",
+        "present": true,
+        "text": "Rust Axum Tokio SQLite sqlx"
+      },
+      {
+        "id": "dec.model",
+        "present": true,
+        "text": "Todo id title completed timestamps"
+      },
+      {
+        "id": "dec.routes",
+        "present": true,
+        "text": "CRUD /todos and /health"
+      },
+      {
+        "id": "dec.filter",
+        "present": true,
+        "text": "completed query filter"
+      },
+      {
+        "id": "dec.validation",
+        "present": true,
+        "text": "title 1..=200"
+      },
+      {
+        "id": "dec.errors",
+        "present": true,
+        "text": "error code message envelope"
+      },
+      {
+        "id": "dec.config",
+        "present": true,
+        "text": "DATABASE_URL HOST PORT"
+      },
+      {
+        "id": "dec.tests",
+        "present": true,
+        "text": "integration tests"
+      },
+      {
+        "id": "dec.oos",
+        "present": true,
+        "text": "excludes auth UI pagination as required"
+      }
+    ],
+    "present_count": 9,
+    "total": 9,
+    "ratio": 1.0
+  },
+  "plan_depth": {
+    "items": [
+      {
+        "id": "depth.proposal",
+        "present": true,
+        "text": ""
+      },
+      {
+        "id": "depth.tasks",
+        "present": true,
+        "text": ""
+      }
+    ],
+    "present_count": 2,
+    "total": 2,
+    "ratio": 1.0
+  },
+  "guardrail_fidelity": {
+    "applicable": true,
+    "items": [
+      {
+        "id": "gr.delivery",
+        "present": true,
+        "text": ""
+      },
+      {
+        "id": "gr.approval",
+        "present": true,
+        "text": ""
+      },
+      {
+        "id": "gr.remote",
+        "present": true,
+        "text": ""
+      }
+    ],
+    "present_count": 3,
+    "total": 3,
+    "ratio": 1.0
+  },
+  "artifact_bulk": {
+    "file_count": 6,
+    "bytes": 22533
+  },
+  "hallucination_penalty": {
+    "hits": [],
+    "count": 0
+  },
+  "overplanning_penalty": {
+    "hits": [],
+    "count": 0
+  },
+  "wall_clock_seconds": 78,
+  "tokens": {
+    "tiktoken": {
+      "total": 6115,
+      "encoding": "cl100k_base"
+    },
+    "cursor_ui": {
+      "total": null,
+      "notes": ""
+    },
+    "estimate_chars": {
+      "total": 6102
+    }
+  },
+  "tool_calls": 33
+}

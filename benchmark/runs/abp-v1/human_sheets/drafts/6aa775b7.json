@@ -1,0 +1,115 @@
+{
+  "blind_id": "6aa775b7",
+  "fixture": "f1",
+  "scorer": "agent-draft",
+  "model": "composer-2.5",
+  "items": [
+    {
+      "id": "req.stack",
+      "present": true,
+      "needs_review": false,
+      "evidence": "01-01-PLAN T01: axum, tokio, sqlx (sqlite + runtime + migrate); DESIGN_SUMMARY: Axum + Tokio + sqlx SQLite",
+      "note": ""
+    },
+    {
+      "id": "req.model",
+      "present": true,
+      "needs_review": false,
+      "evidence": "01-01-PLAN T02: id TEXT PK (UUID), title TEXT NOT NULL, completed INTEGER NOT NULL DEFAULT 0, created_at/updated_at TEXT NOT NULL (RFC3339)",
+      "note": ""
+    },
+    {
+      "id": "req.post",
+      "present": true,
+      "needs_review": false,
+      "evidence": "01-02-PLAN T02: POST /todos body {title, completed?}; success 201 full Todo with server UUID and timestamps",
+      "note": ""
+    },
+    {
+      "id": "req.get_list",
+      "present": true,
+      "needs_review": false,
+      "evidence": "01-02-PLAN T03: GET /todos returns JSON array",
+      "note": ""
+    },
+    {
+      "id": "req.filter",
+      "present": true,
+      "needs_review": false,
+      "evidence": "01-02-PLAN T03: optional completed=true|false filter; invalid completed value -> 400 validation_error",
+      "note": ""
+    },
+    {
+      "id": "req.get_one",
+      "present": true,
+      "needs_review": false,
+      "evidence": "01-02-PLAN T04: GET /todos/:id 200/404",
+      "note": ""
+    },
+    {
+      "id": "req.patch",
+      "present": true,
+      "needs_review": false,
+      "evidence": "01-02-PLAN T04: PATCH subset of title/completed, require >=1 field else 400, title rules when present, update updated_at",
+      "note": ""
+    },
+    {
+      "id": "req.delete",
+      "present": true,
+      "needs_review": false,
+      "evidence": "01-02-PLAN T04: DELETE 204 or 404",
+      "note": ""
+    },
+    {
+      "id": "req.validation",
+      "present": true,
+      "needs_review": false,
+      "evidence": "01-02-PLAN T02: reject empty/whitespace or >200 with 400 validation_error",
+      "note": ""
+    },
+    {
+      "id": "req.errors",
+      "present": true,
+      "needs_review": false,
+      "evidence": "01-02-PLAN T01: AppError -> JSON {error:{code,message}} with codes validation_error, not_found, internal_error",
+      "note": ""
+    },
+    {
+      "id": "req.migrations",
+      "present": true,
+      "needs_review": false,
+      "evidence": "01-01-PLAN T02: Run migrations on startup via sqlx; 01-ROADMAP: SQLite schema applied via sqlx migrations on startup",
+      "note": ""
+    },
+    {
+      "id": "req.config",
+      "present": true,
+      "needs_review": false,
+      "evidence": "01-01-PLAN T03: Read DATABASE_URL (default sqlite:todos.db), HOST (127.0.0.1), PORT (8080)",
+      "note": ""
+    },
+    {
+      "id": "req.health",
+      "present": true,
+      "needs_review": false,
+      "evidence": "01-01-PLAN T03: GET /health -> 200 {\"status\":\"ok\"}",
+      "note": ""
+    },
+    {
+      "id": "req.tests",
+      "present": true,
+      "needs_review": false,
+      "evidence": "01-03-PLAN T01: create, list, list filter, get, patch, delete; validation empty title, overlong title; 404 for get/patch/delete",
+      "note": ""
+    }
+  ],
+  "depth_ok": true,
+  "depth_needs_review": false,
+  "depth_note": "ROADMAP slices S01\u2013S03 with per-slice tasks (T01\u2013T04), files, and verification steps",
+  "guardrails_ok": true,
+  "guardrails_needs_review": false,
+  "guardrails_note": "01-ROADMAP: human approval before execution; Task Handoff Gate pause after each task; Remote Mutation Rule no push/PR without approval",
+  "summary_note": "Comprehensive GSD-style plan with all f1 checklist items explicitly covered across slices.",
+  "drafted_at": "2026-07-30T15:25:31+00:00",
+  "driver_wall_seconds": 68.8
+}

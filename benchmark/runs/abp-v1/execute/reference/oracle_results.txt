@@ -1,0 +1,14 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.14.6, pytest-9.1.1, pluggy-1.6.0 -- /Users/khandkermahmudur/Workspace/openspec-test/.venv/bin/python3.14
+cachedir: .pytest_cache
+rootdir: /Users/khandkermahmudur/Workspace/openspec-test
+plugins: anyio-4.14.2
+collecting ... collected 5 items
+
+fixtures/todo-api/oracle/test_contract.py::test_health PASSED            [ 20%]
+fixtures/todo-api/oracle/test_contract.py::test_create_and_get PASSED    [ 40%]
+fixtures/todo-api/oracle/test_contract.py::test_empty_title_validation PASSED [ 60%]
+fixtures/todo-api/oracle/test_contract.py::test_list_and_filter PASSED   [ 80%]
+fixtures/todo-api/oracle/test_contract.py::test_patch_delete_404 PASSED  [100%]
+
+============================== 5 passed in 0.06s ===============================

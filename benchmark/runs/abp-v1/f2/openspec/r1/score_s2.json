@@ -1,0 +1,13 @@
+{
+  "blind_id": "d87d1e37",
+  "run_dir": "benchmark/runs/abp-v1/f2/openspec/r1",
+  "arm": "openspec",
+  "fixture": "f2",
+  "replicate": 1,
+  "coverage_ratio": 1.0,
+  "items_scored": 9,
+  "items_total": 9,
+  "depth_ok": true,
+  "guardrails_ok": true,
+  "complete": true
+}

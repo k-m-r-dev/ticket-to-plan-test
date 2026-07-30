@@ -1,0 +1,80 @@
+{
+  "blind_id": "72035eae",
+  "fixture": "f2",
+  "scorer": "agent-draft",
+  "model": "composer-2.5",
+  "items": [
+    {
+      "id": "dec.stack",
+      "present": true,
+      "needs_review": false,
+      "evidence": "ROADMAP Q1\u2013Q2: \"Rust + Axum on Tokio\"; \"SQLite via sqlx\"; S01 Goal: \"Rust/Axum/Tokio/sqlx project\"",
+      "note": ""
+    },
+    {
+      "id": "dec.model",
+      "present": true,
+      "needs_review": false,
+      "evidence": "ROADMAP Q7: \"id (UUID, server-generated), title (trimmed, 1..=200 chars), completed (bool, default false), created_at / updated_at (RFC 3339 UTC)\"",
+      "note": ""
+    },
+    {
+      "id": "dec.routes",
+      "present": true,
+      "needs_review": false,
+      "evidence": "ROADMAP API contract table: POST/GET/PATCH/DELETE /todos and GET /health with status codes",
+      "note": ""
+    },
+    {
+      "id": "dec.filter",
+      "present": true,
+      "needs_review": false,
+      "evidence": "ROADMAP Q5: \"Optional completed=true|false on GET /todos\"; S02 T03: \"Optional query completed=true or completed=false\"",
+      "note": ""
+    },
+    {
+      "id": "dec.validation",
+      "present": true,
+      "needs_review": false,
+      "evidence": "ROADMAP Q7: \"title (trimmed, 1..=200 chars)\"; S02 T02: \"400 + validation_error for empty/whitespace-only or title > 200 chars\"",
+      "note": ""
+    },
+    {
+      "id": "dec.errors",
+      "present": true,
+      "needs_review": false,
+      "evidence": "ROADMAP Q4: \"{ \\\"error\\\": { \\\"code\\\": \\\"<snake_case>\\\", \\\"message\\\": \\\"<string>\\\" } }\"; S02 T07: \"Assumed shape { \\\"error\\\": { \\\"code\\\", \\\"message\\\" } }\"",
+      "note": ""
+    },
+    {
+      "id": "dec.config",
+      "present": true,
+      "needs_review": false,
+      "evidence": "ROADMAP Q8: \"env DATABASE_URL, HOST, PORT with defaults\"; S01 T03: \"HOST default 127.0.0.1, PORT default 8080\"",
+      "note": ""
+    },
+    {
+      "id": "dec.tests",
+      "present": true,
+      "needs_review": false,
+      "evidence": "ROADMAP success criteria: \"Integration tests cover CRUD, filter, validation failures, and 404 paths\"; S03 T02 lists full integration suite",
+      "note": ""
+    },
+    {
+      "id": "dec.oos",
+      "present": true,
+      "needs_review": false,
+      "evidence": "ROADMAP Out of scope: \"Authentication / authorization \u2026 pagination \u2026 web UI\"; Q5: \"no pagination in v1\"; Q6: \"None \u2014 default bind 127.0.0.1\"",
+      "note": ""
+    }
+  ],
+  "depth_ok": true,
+  "depth_needs_review": false,
+  "depth_note": "Milestone \u2192 S01\u2013S03 slices \u2192 numbered tasks with inputs, outputs, validation gates, and DoD",
+  "guardrails_ok": true,
+  "guardrails_needs_review": false,
+  "guardrails_note": "ROADMAP Guardrails: Task Handoff Gate (wait for do next), Remote Mutation Rule (no push/PR without approval), human approval before commit",
+  "summary_note": "f2 ambiguous-ticket plan with documented grilling assumptions; all decision items explicitly resolved in ROADMAP and slice plans",
+  "drafted_at": "2026-07-30T15:57:38+00:00",
+  "driver_wall_seconds": 70.3
+}

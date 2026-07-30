@@ -1,0 +1,13 @@
+{
+  "blind_id": "d01b78f9",
+  "run_dir": "benchmark/runs/abp-v1/f1/native/r3",
+  "arm": "native",
+  "fixture": "f1",
+  "replicate": 3,
+  "coverage_ratio": 1.0,
+  "items_scored": 14,
+  "items_total": 14,
+  "depth_ok": true,
+  "guardrails_ok": true,
+  "complete": true
+}

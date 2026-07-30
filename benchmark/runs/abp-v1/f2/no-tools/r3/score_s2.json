@@ -1,0 +1,13 @@
+{
+  "blind_id": "72035eae",
+  "run_dir": "benchmark/runs/abp-v1/f2/no-tools/r3",
+  "arm": "no-tools",
+  "fixture": "f2",
+  "replicate": 3,
+  "coverage_ratio": 1.0,
+  "items_scored": 9,
+  "items_total": 9,
+  "depth_ok": true,
+  "guardrails_ok": true,
+  "complete": true
+}
