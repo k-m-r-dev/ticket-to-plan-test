@@ -1,0 +1,5 @@
+run_id,arm,replicate,wall_clock_s,tokens_total,tool_calls,coverage,depth,guardrails,files,bytes,hallucinations,overplan
+bench-todo-gsd-r1,gsd,1,180,3698,4,1.0,1.0,1.0,5,7602,0,0
+bench-todo-native-r1,native,1,60,2108,0,1.0,1.0,N/A,1,1192,0,0
+bench-todo-no-tools-r1,no-tools,1,90,2935,0,0.9285714285714286,1.0,1.0,4,4485,0,0
+bench-todo-openspec-r1,openspec,1,150,3634,3,1.0,1.0,1.0,5,7339,0,0

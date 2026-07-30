@@ -1,0 +1,53 @@
+{
+  "fixture": "todo-api",
+  "requirements": [
+    {"id": "req.stack", "text": "Rust Axum Tokio SQLite sqlx", "keywords": ["axum", "sqlx", "sqlite", "tokio"]},
+    {"id": "req.model", "text": "Todo fields id title completed created_at updated_at", "keywords": ["title", "completed", "created_at", "updated_at", "uuid"]},
+    {"id": "req.post", "text": "POST /todos create 201", "keywords": ["POST /todos", "201"]},
+    {"id": "req.get_list", "text": "GET /todos list", "keywords": ["GET /todos"]},
+    {"id": "req.filter", "text": "completed query filter", "keywords": ["completed=", "filter"]},
+    {"id": "req.get_one", "text": "GET /todos/:id", "keywords": ["GET /todos/", ":id"]},
+    {"id": "req.patch", "text": "PATCH /todos/:id", "keywords": ["PATCH"]},
+    {"id": "req.delete", "text": "DELETE /todos/:id 204", "keywords": ["DELETE", "204"]},
+    {"id": "req.validation", "text": "title validation 1..=200", "keywords": ["validation", "200", "empty"]},
+    {"id": "req.errors", "text": "error JSON code message", "keywords": ["error", "validation_error", "not_found"]},
+    {"id": "req.migrations", "text": "sqlx migrations on startup", "keywords": ["migration", "sqlx"]},
+    {"id": "req.config", "text": "DATABASE_URL HOST PORT", "keywords": ["DATABASE_URL", "PORT", "HOST"]},
+    {"id": "req.health", "text": "GET /health", "keywords": ["/health"]},
+    {"id": "req.tests", "text": "integration tests CRUD validation 404", "keywords": ["test", "404", "integration"]}
+  ],
+  "depth": {
+    "gsd": [
+      {"id": "depth.unit", "text": "top-level unit / milestone / phase planned", "keywords": ["milestone", "phase", "M0"]},
+      {"id": "depth.slices", "text": "slices defined", "keywords": ["slice", "S0"]},
+      {"id": "depth.tasks", "text": "tasks with validation", "keywords": ["task", "T0", "validation"]}
+    ],
+    "openspec": [
+      {"id": "depth.proposal", "text": "proposal.md", "keywords": ["proposal"]},
+      {"id": "depth.specs", "text": "specs requirements", "keywords": ["requirement", "scenario", "specs"]},
+      {"id": "depth.design", "text": "design.md", "keywords": ["design"]},
+      {"id": "depth.tasks", "text": "tasks.md checklist", "keywords": ["tasks", "- [ ]"]}
+    ],
+    "no-tools": [
+      {"id": "depth.structure", "text": "structured plan with phases/slices/tasks", "keywords": ["slice", "task", "phase"]},
+      {"id": "depth.validation", "text": "per-task validation gates", "keywords": ["validation", "cargo test"]}
+    ],
+    "native": [
+      {"id": "depth.steps", "text": "ordered implementation steps", "keywords": ["step", "1.", "implement"]},
+      {"id": "depth.tests", "text": "test plan included", "keywords": ["test"]}
+    ]
+  },
+  "guardrails": [
+    {"id": "gr.delivery_map", "text": "Delivery and Guardrails or Required Milestone Map fields", "keywords": ["Delivery", "Guardrails", "commit cadence", "integration"]},
+    {"id": "gr.handoff", "text": "Task Handoff Gate cited or equivalent pause-after-task", "keywords": ["Handoff", "do next", "approval"]},
+    {"id": "gr.no_remote", "text": "no push/PR without approval", "keywords": ["push", "PR", "remote"]},
+    {"id": "gr.human_approval", "text": "human approval before execution", "keywords": ["approval", "before execution", "stop"]}
+  ],
+  "not_in_scope": [
+    {"id": "oos.auth", "text": "auth/JWT/OAuth as required work", "keywords": ["authentication", "JWT", "OAuth", "login"]},
+    {"id": "oos.ui", "text": "web UI as required work", "keywords": ["React", "frontend", "web UI", "HTML page"]},
+    {"id": "oos.pagination", "text": "pagination as required work", "keywords": ["pagination", "page size", "cursor paging"]},
+    {"id": "oos.k8s", "text": "k8s/docker deploy as required work", "keywords": ["Kubernetes", "Dockerfile", "helm"]},
+    {"id": "oos.graphql", "text": "GraphQL/gRPC as required work", "keywords": ["GraphQL", "gRPC"]}
+  ]
+}

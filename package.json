@@ -1,0 +1,23 @@
+{
+  "name": "openspec-test",
+  "version": "1.0.0",
+  "description": "OpenSpec + ticket-to-plan planning benchmark",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "openspec": "openspec",
+    "test": "python3 -m pytest -q || true",
+    "bench:new": "python3 benchmark/new_run.py",
+    "bench:score": "python3 benchmark/score.py",
+    "bench:report": "python3 benchmark/report.py"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@fission-ai/openspec": "^1.7.0"
+  }
+}

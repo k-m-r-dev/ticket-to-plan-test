@@ -1,0 +1,7 @@
+schema: spec-driven
+
+context: |
+  Benchmark workspace comparing ticket-to-plan (GSD) vs OpenSpec vs no-tools vs native planning.
+  Primary fixture: fixtures/todo-api/SPEC.md — Rust Axum + SQLite/sqlx Todo HTTP API (no UI).
+  Prefer npx openspec (local npm dependency) over a global install.
+  Do not remove .gsd/; GSD and OpenSpec coexist.

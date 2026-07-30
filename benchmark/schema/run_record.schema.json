@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openspec-test.local/benchmark/run_record.schema.json",
+  "title": "BenchmarkRunRecord",
+  "type": "object",
+  "required": ["run_id", "arm", "replicate", "fixture", "created_at"],
+  "properties": {
+    "run_id": { "type": "string" },
+    "arm": {
+      "type": "string",
+      "enum": ["gsd", "openspec", "no-tools", "native"]
+    },
+    "replicate": { "type": "integer", "minimum": 1, "default": 1 },
+    "fixture": { "type": "string", "default": "todo-api" },
+    "skill": { "type": ["string", "null"] },
+    "created_at": { "type": "string", "format": "date-time" },
+    "started_at": { "type": ["string", "null"], "format": "date-time" },
+    "ended_at": { "type": ["string", "null"], "format": "date-time" },
+    "wall_clock_seconds": { "type": ["number", "null"], "minimum": 0 },
+    "tokens": {
+      "type": "object",
+      "properties": {
+        "input": { "type": ["integer", "null"] },
+        "output": { "type": ["integer", "null"] },
+        "total": { "type": ["integer", "null"] },
+        "source": {
+          "type": "string",
+          "enum": ["cursor_ui", "estimate_chars", "unknown", "none"]
+        },
+        "notes": { "type": "string" }
+      }
+    },
+    "tool_calls": { "type": ["integer", "null"], "minimum": 0 },
+    "artifact_paths": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["created", "running", "plan_ready", "scored", "aborted"]
+    },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": true
+}
